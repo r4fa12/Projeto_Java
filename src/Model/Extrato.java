@@ -9,5 +9,15 @@ package Model;
  * @author rafae
  */
 public class Extrato {
+    String nomemoeda;
+
+    public String getNomemoeda() {
+        return nomemoeda;
+    }
+
+    public void setNomemoeda(String nomemoeda) {
+        this.nomemoeda = nomemoeda;
+    }
+    
     
 }

@@ -17,4 +17,10 @@ public class Real extends Moedas implements Tarifa{
     public double getTaxaVender(){
         return 0.00;
     }
+
+    public Real(double cotacao) {
+        super(cotacao);
+    }
+    
+    
 }

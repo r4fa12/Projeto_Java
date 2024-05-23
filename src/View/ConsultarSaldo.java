@@ -228,16 +228,14 @@ public class ConsultarSaldo extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void TxtExibirNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtExibirNomeActionPerformed
-        this.TxtExibirNome.setText(usuario.getCpf());
+
     }//GEN-LAST:event_TxtExibirNomeActionPerformed
 
     private void TxtExibirCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtExibirCpfActionPerformed
         
     }//GEN-LAST:event_TxtExibirCpfActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+   
 //    public static void main(String args[]) {
 //        /* Set the Nimbus look and feel */
 //        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

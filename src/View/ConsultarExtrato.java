@@ -4,12 +4,13 @@
  */
 package View;
 
+import Controller.Controle;
 import Model.Investidor;
 
 
 /**
  *
- * @author rafae
+ * @author uniframendes
  */
 public class ConsultarExtrato extends javax.swing.JFrame {
 
@@ -19,9 +20,12 @@ public class ConsultarExtrato extends javax.swing.JFrame {
     
 
     Investidor usuario;
+    Controle controle;
 
-    public ConsultarExtrato() {
+    public ConsultarExtrato(Investidor usuario, Controle controle) {
         initComponents();
+        this.usuario = usuario;
+        this.controle = controle;
 
     }
 
@@ -35,6 +39,8 @@ public class ConsultarExtrato extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        TxtAreaExtrato = new javax.swing.JTextArea();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -44,6 +50,10 @@ public class ConsultarExtrato extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Extrato");
+
+        TxtAreaExtrato.setColumns(20);
+        TxtAreaExtrato.setRows(5);
+        jScrollPane1.setViewportView(TxtAreaExtrato);
 
         jMenu1.setText("Menu");
 
@@ -67,14 +77,20 @@ public class ConsultarExtrato extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(194, 194, 194)
                 .addComponent(jLabel1)
-                .addContainerGap(194, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(18, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(264, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
+                .addGap(41, 41, 41))
         );
 
         pack();
@@ -86,9 +102,7 @@ public class ConsultarExtrato extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    
 //    public static void main(String args[]) {
 //        /* Set the Nimbus look and feel */
 //        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -122,10 +136,12 @@ public class ConsultarExtrato extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JTextArea TxtAreaExtrato;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

@@ -11,7 +11,6 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
@@ -26,7 +25,7 @@ public class Depositar extends javax.swing.JFrame {
     Investidor usuario;
     Controle controle;
     
-    public Depositar(Investidor usuario) {
+    public Depositar(Investidor usuario, Controle controle) {
         initComponents();
         this.usuario = usuario;
         this.controle = controle;
@@ -204,9 +203,7 @@ public class Depositar extends javax.swing.JFrame {
         controle.Depositar(valor);
     }//GEN-LAST:event_BtDepositarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    
 //    public static void main(String args[]) {
 //        /* Set the Nimbus look and feel */
 //        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

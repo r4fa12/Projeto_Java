@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import Model.Investidor;
+import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.ERROR_MESSAGE;
 import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
@@ -176,9 +177,7 @@ public class SenhaSaldo extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_BtContinuarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+   
 //    public static void main(String args[]) {
 //        /* Set the Nimbus look and feel */
 //        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

@@ -9,7 +9,7 @@ import Model.Investidor;
 
 /**
  *
- * @author rafael
+ * @author uniframendes
  */
 public class Menu extends javax.swing.JFrame {
     private String opcao;
@@ -38,84 +38,28 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         LblMenu = new javax.swing.JLabel();
-        RbtOpcao1 = new javax.swing.JRadioButton();
-        RbtOpcao2 = new javax.swing.JRadioButton();
-        RbtOpcao4 = new javax.swing.JRadioButton();
-        RbtOpcao5 = new javax.swing.JRadioButton();
-        RbtOpcao3 = new javax.swing.JRadioButton();
-        RbtOpcao7 = new javax.swing.JRadioButton();
-        RbtOpcao6 = new javax.swing.JRadioButton();
-        RbtOpcao8 = new javax.swing.JRadioButton();
         BtSelecionar = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        RbtOpcao1 = new javax.swing.JRadioButton();
+        jPanel2 = new javax.swing.JPanel();
+        RbtOpcao2 = new javax.swing.JRadioButton();
+        jPanel3 = new javax.swing.JPanel();
+        RbtOpcao4 = new javax.swing.JRadioButton();
+        jPanel4 = new javax.swing.JPanel();
+        RbtOpcao3 = new javax.swing.JRadioButton();
+        jPanel5 = new javax.swing.JPanel();
+        RbtOpcao5 = new javax.swing.JRadioButton();
+        jPanel6 = new javax.swing.JPanel();
+        RbtOpcao6 = new javax.swing.JRadioButton();
+        jPanel7 = new javax.swing.JPanel();
+        RbtOpcao7 = new javax.swing.JRadioButton();
+        jPanel8 = new javax.swing.JPanel();
+        RbtOpcao8 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         LblMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         LblMenu.setText("MENU");
-
-        RbtOpcao1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        RbtOpcao1.setText("1. Consultar Saldo");
-        RbtOpcao1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RbtOpcao1ActionPerformed(evt);
-            }
-        });
-
-        RbtOpcao2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        RbtOpcao2.setText("2. Consultar Extrato");
-        RbtOpcao2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RbtOpcao2ActionPerformed(evt);
-            }
-        });
-
-        RbtOpcao4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        RbtOpcao4.setText("4. Sacar");
-        RbtOpcao4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RbtOpcao4ActionPerformed(evt);
-            }
-        });
-
-        RbtOpcao5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        RbtOpcao5.setText("5. Comprar CriptoMoedas");
-        RbtOpcao5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RbtOpcao5ActionPerformed(evt);
-            }
-        });
-
-        RbtOpcao3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        RbtOpcao3.setText("3. Depositar");
-        RbtOpcao3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RbtOpcao3ActionPerformed(evt);
-            }
-        });
-
-        RbtOpcao7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        RbtOpcao7.setText("7. Atualizar Cotação");
-        RbtOpcao7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RbtOpcao7ActionPerformed(evt);
-            }
-        });
-
-        RbtOpcao6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        RbtOpcao6.setText("6. Vender CriptoMoedas");
-        RbtOpcao6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RbtOpcao6ActionPerformed(evt);
-            }
-        });
-
-        RbtOpcao8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        RbtOpcao8.setText("8. Sair");
-        RbtOpcao8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RbtOpcao8ActionPerformed(evt);
-            }
-        });
 
         BtSelecionar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BtSelecionar.setText("Selecionar");
@@ -126,65 +70,278 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        RbtOpcao1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        RbtOpcao1.setText("1. Consultar Saldo");
+        RbtOpcao1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        RbtOpcao1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RbtOpcao1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(RbtOpcao1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(36, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(RbtOpcao1)
+                .addGap(14, 14, 14))
+        );
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        RbtOpcao2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        RbtOpcao2.setText("2. Consultar Extrato");
+        RbtOpcao2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RbtOpcao2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(RbtOpcao2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(RbtOpcao2)
+                .addContainerGap())
+        );
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        RbtOpcao4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        RbtOpcao4.setText("4. Sacar");
+        RbtOpcao4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RbtOpcao4ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addComponent(RbtOpcao4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(RbtOpcao4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        RbtOpcao3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        RbtOpcao3.setText("3. Depositar");
+        RbtOpcao3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RbtOpcao3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(RbtOpcao3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(13, Short.MAX_VALUE)
+                .addComponent(RbtOpcao3)
+                .addContainerGap())
+        );
+
+        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        RbtOpcao5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        RbtOpcao5.setText("5. Comprar CriptoMoedas");
+        RbtOpcao5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RbtOpcao5ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(5, 5, 5)
+                .addComponent(RbtOpcao5)
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(13, Short.MAX_VALUE)
+                .addComponent(RbtOpcao5)
+                .addGap(9, 9, 9))
+        );
+
+        jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        RbtOpcao6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        RbtOpcao6.setText("6. Vender CriptoMoedas");
+        RbtOpcao6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RbtOpcao6ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addComponent(RbtOpcao6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addComponent(RbtOpcao6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        RbtOpcao7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        RbtOpcao7.setText("7. Atualizar Cotação");
+        RbtOpcao7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RbtOpcao7ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(RbtOpcao7)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addComponent(RbtOpcao7)
+                .addContainerGap(11, Short.MAX_VALUE))
+        );
+
+        jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        RbtOpcao8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        RbtOpcao8.setText("8. Sair");
+        RbtOpcao8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RbtOpcao8ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(77, 77, 77)
+                .addComponent(RbtOpcao8)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addComponent(RbtOpcao8)
+                .addContainerGap(9, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(RbtOpcao8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(BtSelecionar, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(178, 178, 178)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(182, 182, 182))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(RbtOpcao3)
-                            .addComponent(RbtOpcao4)))
+                        .addGap(220, 220, 220)
+                        .addComponent(BtSelecionar, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(207, 207, 207)
-                        .addComponent(LblMenu))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(RbtOpcao7))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(RbtOpcao5)
-                            .addComponent(RbtOpcao6)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(RbtOpcao1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(RbtOpcao2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(214, Short.MAX_VALUE))
+                        .addGap(243, 243, 243)
+                        .addComponent(LblMenu)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
+                .addGap(27, 27, 27)
                 .addComponent(LblMenu)
-                .addGap(40, 40, 40)
-                .addComponent(RbtOpcao1)
+                .addGap(26, 26, 26)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(RbtOpcao2)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(RbtOpcao3)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(RbtOpcao4)
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(RbtOpcao5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(RbtOpcao6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(RbtOpcao7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(RbtOpcao8)
-                    .addComponent(BtSelecionar, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
+                .addComponent(BtSelecionar, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         pack();
@@ -212,17 +369,6 @@ public class Menu extends javax.swing.JFrame {
         this.RbtOpcao7.setSelected(false);
         this.RbtOpcao8.setSelected(false);
     }//GEN-LAST:event_RbtOpcao2ActionPerformed
-
-    private void RbtOpcao3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RbtOpcao3ActionPerformed
-        opcao = "Opcao 3";
-        this.RbtOpcao1.setSelected(false);
-        this.RbtOpcao2.setSelected(false);
-        this.RbtOpcao4.setSelected(false);
-        this.RbtOpcao5.setSelected(false);
-        this.RbtOpcao6.setSelected(false);
-        this.RbtOpcao7.setSelected(false);
-        this.RbtOpcao8.setSelected(false);
-    }//GEN-LAST:event_RbtOpcao3ActionPerformed
 
     private void RbtOpcao4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RbtOpcao4ActionPerformed
         opcao = "Opcao 4";
@@ -287,38 +433,38 @@ public class Menu extends javax.swing.JFrame {
         }
         
         if (opcao.equals("Opcao 2")){
-            SenhaExtrato senha = new SenhaExtrato(usuario);
+            SenhaExtrato senha = new SenhaExtrato(usuario, controle);
             senha.setVisible(true);
             this.setVisible(false);
         }
         
         if (opcao.equals("Opcao 3")){
-            Depositar deposito = new Depositar(usuario);
+            Depositar deposito = new Depositar(usuario, controle);
             deposito.setVisible(true);
             this.setVisible(false);
         }
         
         if (opcao.equals("Opcao 4")){
-            Sacar saque = new Sacar(controle);
+            Sacar saque = new Sacar(usuario, controle);
             saque.setVisible(true);
             this.setVisible(false);
         }
         
         if(opcao.equals("Opcao 5")){
-            ComprarCriptoMoedas comprar = new ComprarCriptoMoedas(usuario);
-            comprar.setVisible(true);
+            SenhaComprarCripto senha = new SenhaComprarCripto(usuario);
+            senha.setVisible(true);
             this.setVisible(false);
         }
         
         if(opcao.equals("Opcao 6")){
-            VenderCriptoMoedas vender = new VenderCriptoMoedas(usuario);
+            SenhaVenderCripto vender = new SenhaVenderCripto(usuario);
             vender.setVisible(true);
             this.setVisible(false);
         }
         
         if(opcao.equals("Opcao 7")){
-            AtualizarCotacao atualizar = new AtualizarCotacao(usuario);
-            atualizar.setVisible(true);
+            Cotacao cotacao = new Cotacao(usuario);
+            cotacao.setVisible(true);
             this.setVisible(false);
         }
         
@@ -330,9 +476,18 @@ public class Menu extends javax.swing.JFrame {
         
     }//GEN-LAST:event_BtSelecionarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void RbtOpcao3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RbtOpcao3ActionPerformed
+        opcao = "Opcao 3";
+        this.RbtOpcao1.setSelected(false);
+        this.RbtOpcao2.setSelected(false);
+        this.RbtOpcao4.setSelected(false);
+        this.RbtOpcao5.setSelected(false);
+        this.RbtOpcao6.setSelected(false);
+        this.RbtOpcao7.setSelected(false);
+        this.RbtOpcao8.setSelected(false);
+    }//GEN-LAST:event_RbtOpcao3ActionPerformed
+
+    
 //    public static void main(String args[]) {
 //        /* Set the Nimbus look and feel */
 //        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -379,5 +534,13 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JRadioButton RbtOpcao6;
     private javax.swing.JRadioButton RbtOpcao7;
     private javax.swing.JRadioButton RbtOpcao8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     // End of variables declaration//GEN-END:variables
 }

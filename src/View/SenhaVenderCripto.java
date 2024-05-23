@@ -17,25 +17,16 @@ import javax.swing.JTextField;
  *
  * @author rafae
  */
-public class SenhaExtrato extends javax.swing.JFrame {
+public class SenhaVenderCripto extends javax.swing.JFrame {
 
     /**
-     * Creates new form SenhaExtrato
+     * Creates new form SenhaVenderCripto
      */
-    Controle controle;
     Investidor usuario;
-    
-    public SenhaExtrato(Investidor usuario, Controle controle) {
+    Controle controle;
+    public SenhaVenderCripto(Investidor usuario) {
         initComponents();
         this.usuario = usuario;
-        this.controle = controle;
-    }
-
-    public Controle getControle() {
-        return controle;
-    }
-
-    public void setControle(Controle controle) {
         this.controle = controle;
     }
 
@@ -45,6 +36,14 @@ public class SenhaExtrato extends javax.swing.JFrame {
 
     public void setUsuario(Investidor usuario) {
         this.usuario = usuario;
+    }
+
+    public Controle getControle() {
+        return controle;
+    }
+
+    public void setControle(Controle controle) {
+        this.controle = controle;
     }
 
     public JButton getBtContinuar() {
@@ -79,12 +78,12 @@ public class SenhaExtrato extends javax.swing.JFrame {
         this.LblSenha = LblSenha;
     }
 
-    public JTextField getTxtSenhaExtrato() {
+    public JTextField getTxtSenha() {
         return TxtSenha;
     }
 
-    public void setTxtSenhaExtrato(JTextField TxtSenhaExtrato) {
-        this.TxtSenha = TxtSenhaExtrato;
+    public void setTxtSenha(JTextField TxtSenha) {
+        this.TxtSenha = TxtSenha;
     }
     
     
@@ -144,7 +143,7 @@ public class SenhaExtrato extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(198, 198, 198)
                         .addComponent(BtContinuar)))
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,12 +165,12 @@ public class SenhaExtrato extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtContinuarActionPerformed
-        if(this.TxtSenha.getText().equals(usuario.getSenha())){
+        if(this.getTxtSenha().getText().equals(usuario.getSenha())){
             JOptionPane.showMessageDialog(null,"Senha correta!" , "Concluído!", INFORMATION_MESSAGE);
-            ConsultarExtrato extrato = new ConsultarExtrato(usuario, controle);
-            controle.LerExtrato(extrato);
+            VenderCriptoMoedas vender = new VenderCriptoMoedas(usuario);
+            vender.setVisible(true);
             this.setVisible(false);
-            extrato.setVisible(true);
+
         }else{
             JOptionPane.showMessageDialog(null,"Senha incorreta!" , "Erro", ERROR_MESSAGE);
         }
@@ -192,20 +191,20 @@ public class SenhaExtrato extends javax.swing.JFrame {
 //                }
 //            }
 //        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(SenhaExtrato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(SenhaVenderCripto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(SenhaExtrato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(SenhaVenderCripto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(SenhaExtrato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(SenhaVenderCripto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(SenhaExtrato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(SenhaVenderCripto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        }
 //        //</editor-fold>
 //
 //        /* Create and display the form */
 //        java.awt.EventQueue.invokeLater(new Runnable() {
 //            public void run() {
-//                new SenhaExtrato().setVisible(true);
+//                new SenhaVenderCripto().setVisible(true);
 //            }
 //        });
 //    }

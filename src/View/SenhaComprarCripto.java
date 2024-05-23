@@ -6,88 +6,26 @@ package View;
 
 import Controller.Controle;
 import Model.Investidor;
-import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.ERROR_MESSAGE;
 import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
-import javax.swing.JTextField;
 
 /**
  *
  * @author rafae
  */
-public class SenhaExtrato extends javax.swing.JFrame {
+public class SenhaComprarCripto extends javax.swing.JFrame {
 
     /**
-     * Creates new form SenhaExtrato
+     * Creates new form SenhaComprarCripto
      */
-    Controle controle;
     Investidor usuario;
-    
-    public SenhaExtrato(Investidor usuario, Controle controle) {
+    Controle controle;
+    public SenhaComprarCripto(Investidor usuario) {
         initComponents();
         this.usuario = usuario;
-        this.controle = controle;
-    }
 
-    public Controle getControle() {
-        return controle;
     }
-
-    public void setControle(Controle controle) {
-        this.controle = controle;
-    }
-
-    public Investidor getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Investidor usuario) {
-        this.usuario = usuario;
-    }
-
-    public JButton getBtContinuar() {
-        return BtContinuar;
-    }
-
-    public void setBtContinuar(JButton BtContinuar) {
-        this.BtContinuar = BtContinuar;
-    }
-
-    public JLabel getLblContinuar() {
-        return LblContinuar;
-    }
-
-    public void setLblContinuar(JLabel LblContinuar) {
-        this.LblContinuar = LblContinuar;
-    }
-
-    public JLabel getLblInsira() {
-        return LblInsira;
-    }
-
-    public void setLblInsira(JLabel LblInsira) {
-        this.LblInsira = LblInsira;
-    }
-
-    public JLabel getLblSenha() {
-        return LblSenha;
-    }
-
-    public void setLblSenha(JLabel LblSenha) {
-        this.LblSenha = LblSenha;
-    }
-
-    public JTextField getTxtSenhaExtrato() {
-        return TxtSenha;
-    }
-
-    public void setTxtSenhaExtrato(JTextField TxtSenhaExtrato) {
-        this.TxtSenha = TxtSenhaExtrato;
-    }
-    
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -168,10 +106,9 @@ public class SenhaExtrato extends javax.swing.JFrame {
     private void BtContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtContinuarActionPerformed
         if(this.TxtSenha.getText().equals(usuario.getSenha())){
             JOptionPane.showMessageDialog(null,"Senha correta!" , "Concluído!", INFORMATION_MESSAGE);
-            ConsultarExtrato extrato = new ConsultarExtrato(usuario, controle);
-            controle.LerExtrato(extrato);
+            ComprarCriptoMoedas comprar = new ComprarCriptoMoedas(usuario);
+            comprar.setVisible(true);
             this.setVisible(false);
-            extrato.setVisible(true);
         }else{
             JOptionPane.showMessageDialog(null,"Senha incorreta!" , "Erro", ERROR_MESSAGE);
         }
@@ -192,20 +129,20 @@ public class SenhaExtrato extends javax.swing.JFrame {
 //                }
 //            }
 //        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(SenhaExtrato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(SenhaComprarCripto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(SenhaExtrato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(SenhaComprarCripto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(SenhaExtrato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(SenhaComprarCripto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(SenhaExtrato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(SenhaComprarCripto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        }
 //        //</editor-fold>
 //
 //        /* Create and display the form */
 //        java.awt.EventQueue.invokeLater(new Runnable() {
 //            public void run() {
-//                new SenhaExtrato().setVisible(true);
+//                new SenhaComprarCripto().setVisible(true);
 //            }
 //        });
 //    }

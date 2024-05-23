@@ -19,8 +19,9 @@ public class Sacar extends javax.swing.JFrame {
      */
     Investidor usuario;
     Controle controle;
-    public Sacar(Controle controle) {
+    public Sacar(Investidor usuario, Controle controle) {
         initComponents();
+        this.usuario = usuario;
         this.controle = controle;
     }
 
@@ -116,12 +117,11 @@ public class Sacar extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void BtSacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtSacarActionPerformed
-        JOptionPane.showMessageDialog(this, "Saque efetuado com sucesso!", "Saque Concluído", JOptionPane.INFORMATION_MESSAGE);
+        double valor = Double.parseDouble(this.TxtSacar.getText());
+        controle.Sacar(valor);
     }//GEN-LAST:event_BtSacarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    
 //    public static void main(String args[]) {
 //        /* Set the Nimbus look and feel */
 //        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

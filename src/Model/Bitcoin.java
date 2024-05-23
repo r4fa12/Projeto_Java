@@ -9,12 +9,16 @@ package Model;
  * @author rafae
  */
 public class Bitcoin extends Moedas implements Tarifa{
+    
+    public Bitcoin(double cotacao){
+        super (cotacao);
+    }
+    
     public double getTaxaComprar(){
-        return 0.02;
+        return Tarifa.TaxaComprarBitcoin;
     }
     
     public double getTaxaVender(){
-        return 0.03;
+        return Tarifa.TaxaVenderBitcoin;
     }
-    
 }

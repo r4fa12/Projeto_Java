@@ -10,4 +10,15 @@ package Model;
  */
 public class Ethereum extends Moedas implements Tarifa{
     
+    public Ethereum(double cotacao){
+        super(cotacao);
+    }
+
+    public double getTaxaComprar() {
+        return Tarifa.TaxaComprarEthereum;
+    }
+
+    public double getTaxaVender() {
+        return Tarifa.TaxaVenderEthereum;
+    }
 }

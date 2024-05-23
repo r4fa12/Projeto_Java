@@ -9,10 +9,28 @@ package Model;
  * @author rafae
  */
 public class Moedas{
-    private double taxavender;
+    private double taxavender, taxacomprar, cotacao;
 
-    public Moedas(double taxavender) {
+    public Moedas(double taxavender, double taxacomprar, double cotacao) {
         this.taxavender = taxavender;
+        this.taxacomprar = taxacomprar;
+        this.cotacao = cotacao;
+    }
+
+    public double getCotacao() {
+        return cotacao;
+    }
+
+    public void setCotacao(double cotacao) {
+        this.cotacao = cotacao;
+    }
+    
+    public Moedas(double cotacao){
+        this.cotacao = cotacao;
+    }
+    
+    public Moedas(){
+        
     }
     
     

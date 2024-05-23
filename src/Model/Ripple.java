@@ -8,6 +8,22 @@ package Model;
  *
  * @author rafae
  */
-public class Ripple extends Moedas implements Tarifa{
+public class Ripple extends Moedas implements Tarifa{  
+    
+    public Ripple(double cotacao){
+        super(cotacao);
+    }
+
+    public double getTaxaComprar() {
+        return Tarifa.TaxaComprarRipple;
+    }
+
+    public double getTaxaVender() {
+        return Tarifa.TaxaVenderRipple;
+    }
+
+   
+    
+   
     
 }

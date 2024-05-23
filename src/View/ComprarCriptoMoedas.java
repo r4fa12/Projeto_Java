@@ -4,7 +4,15 @@
  */
 package View;
 
+import Controller.Controle;
+import Model.Bitcoin;
+import Model.Ethereum;
 import Model.Investidor;
+import Model.Ripple;
+import java.sql.SQLException;
+import java.text.DecimalFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -16,9 +24,16 @@ public class ComprarCriptoMoedas extends javax.swing.JFrame {
      * Creates new form ComprarCriptoMoedas
      */
     Investidor usuario;
+    Controle controle;
     public ComprarCriptoMoedas(Investidor usuario) {
         initComponents();
         this.usuario = usuario;
+        this.controle = new Controle(usuario);
+        DecimalFormat df = new DecimalFormat("#.##");
+        this.TxtAreaCotacao.setText("\nCotação bitcoin: " + df.format(usuario.getCarteira().getMoedas().get(1).getCotacao()).replace(',', '.')
+                + "\n\nCotação ethereum: " + df.format(usuario.getCarteira().getMoedas().get(2).getCotacao()).replace(',', '.') + 
+                "\n\nCotação ripple: " + df.format(usuario.getCarteira().getMoedas().get(3).getCotacao()).replace(',', '.'));
+
     }
 
     /**
@@ -31,6 +46,15 @@ public class ComprarCriptoMoedas extends javax.swing.JFrame {
     private void initComponents() {
 
         LblComprarCriptoMoedas = new javax.swing.JLabel();
+        RbtBitcoin = new javax.swing.JRadioButton();
+        RbtEthereum = new javax.swing.JRadioButton();
+        RbtRipple = new javax.swing.JRadioButton();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        TxtAreaCotacao = new javax.swing.JTextArea();
+        BtComprar = new javax.swing.JButton();
+        TxtValor = new javax.swing.JTextField();
+        LblQuantidade = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -40,6 +64,48 @@ public class ComprarCriptoMoedas extends javax.swing.JFrame {
 
         LblComprarCriptoMoedas.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         LblComprarCriptoMoedas.setText("Comprar Cripto Moedas");
+
+        RbtBitcoin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        RbtBitcoin.setText("Bitcoin");
+        RbtBitcoin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RbtBitcoinActionPerformed(evt);
+            }
+        });
+
+        RbtEthereum.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        RbtEthereum.setText("Ethereum");
+        RbtEthereum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RbtEthereumActionPerformed(evt);
+            }
+        });
+
+        RbtRipple.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        RbtRipple.setText("Ripple");
+        RbtRipple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RbtRippleActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setText("Selecione qual CriptoMoeda deseja comprar");
+
+        TxtAreaCotacao.setColumns(20);
+        TxtAreaCotacao.setRows(5);
+        jScrollPane1.setViewportView(TxtAreaCotacao);
+
+        BtComprar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BtComprar.setText("Comprar");
+        BtComprar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtComprarActionPerformed(evt);
+            }
+        });
+
+        LblQuantidade.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        LblQuantidade.setText("Quantidade:");
 
         jMenu1.setText("Menu");
 
@@ -60,17 +126,59 @@ public class ComprarCriptoMoedas extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 47, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(RbtBitcoin)
+                        .addGap(117, 117, 117)
+                        .addComponent(RbtEthereum)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(RbtRipple))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(98, 98, 98)
+                                .addComponent(LblComprarCriptoMoedas))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel1))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(95, 95, 95)
+                                .addComponent(LblQuantidade)
+                                .addGap(18, 18, 18)
+                                .addComponent(TxtValor, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(53, 53, 53))
             .addGroup(layout.createSequentialGroup()
-                .addGap(98, 98, 98)
-                .addComponent(LblComprarCriptoMoedas)
-                .addContainerGap(101, Short.MAX_VALUE))
+                .addGap(190, 190, 190)
+                .addComponent(BtComprar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(LblComprarCriptoMoedas)
-                .addContainerGap(264, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RbtBitcoin)
+                    .addComponent(RbtEthereum)
+                    .addComponent(RbtRipple))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TxtValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LblQuantidade))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(BtComprar)
+                .addGap(16, 16, 16))
         );
 
         pack();
@@ -82,9 +190,36 @@ public class ComprarCriptoMoedas extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void RbtBitcoinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RbtBitcoinActionPerformed
+        this.RbtEthereum.setSelected(false);
+        this.RbtRipple.setSelected(false);
+        usuario.getExtrato().setNomemoeda("bitcoin");
+        Bitcoin bit = (Bitcoin) usuario.getCarteira().getMoedas().get(1);
+        usuario.getCarteira().getMoedas().get(1).getCotacao();
+    }//GEN-LAST:event_RbtBitcoinActionPerformed
+
+    private void RbtEthereumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RbtEthereumActionPerformed
+        this.RbtBitcoin.setSelected(false);
+        this.RbtRipple.setSelected(false);
+        usuario.getExtrato().setNomemoeda("ethereum");
+        Ethereum ethe = (Ethereum) usuario.getCarteira().getMoedas().get(2);
+        usuario.getCarteira().getMoedas().get(2).getCotacao();
+    }//GEN-LAST:event_RbtEthereumActionPerformed
+
+    private void RbtRippleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RbtRippleActionPerformed
+        this.RbtBitcoin.setSelected(false);
+        this.RbtEthereum.setSelected(false);
+        usuario.getExtrato().setNomemoeda("ripple");
+        Ripple rip = (Ripple) usuario.getCarteira().getMoedas().get(3);
+        usuario.getCarteira().getMoedas().get(3).getCotacao();
+    }//GEN-LAST:event_RbtRippleActionPerformed
+
+    private void BtComprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtComprarActionPerformed
+        double valor = Double.parseDouble(this.TxtValor.getText());
+        controle.ComprarCriptoMoedas(valor);
+    }//GEN-LAST:event_BtComprarActionPerformed
+
+    
 //    public static void main(String args[]) {
 //        /* Set the Nimbus look and feel */
 //        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -118,10 +253,19 @@ public class ComprarCriptoMoedas extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtComprar;
     private javax.swing.JLabel LblComprarCriptoMoedas;
+    private javax.swing.JLabel LblQuantidade;
+    private javax.swing.JRadioButton RbtBitcoin;
+    private javax.swing.JRadioButton RbtEthereum;
+    private javax.swing.JRadioButton RbtRipple;
+    public javax.swing.JTextArea TxtAreaCotacao;
+    private javax.swing.JTextField TxtValor;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
